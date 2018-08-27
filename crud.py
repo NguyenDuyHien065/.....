@@ -21,7 +21,7 @@ while True :
         delete = int(input("Delete position :"))
         del shop_list[delete-1]
     else :
-        print ("Error . Please try gain !!!")
+        print ("Error . Please try again !!!")
     for i in shop_list:
         print(i, end=" ")
 
