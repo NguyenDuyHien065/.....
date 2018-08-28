@@ -12,6 +12,7 @@ while True :
     print("*"*10)
     print("Viết 'stats' để xem chỉ số bản thân hoặc viết 'play' để chơi")
     cmd = input("Your command:")
+    cmd.lower()
     if cmd == "stats":
         print("Name :", player["NAME"])
         print("CLASS:", player["CLASS"])
