@@ -11,7 +11,7 @@ player = {
 while True :
     print("*"*10)
     print("Viết 'stats' để xem chỉ số bản thân hoặc viết 'play' để chơi")
-    cmd = input("Your command")
+    cmd = input("Your command:")
     if cmd == "stats":
         print("Name :", player["NAME"])
         print("CLASS:", player["CLASS"])
@@ -114,8 +114,8 @@ while True :
                         player["HP"] = player["HP"] - damage2
 
                         print("Bạn sử dụng kiếm Assassin X chém 1 nhát vào anh Huy")
-                        print("Huy mất:",damage)
-                        print("HP hiện tại của anh Huy:", huy["HP"])
+                        print("Huy mất:",damage,"HP)
+                        print("HP hiện tại của anh Huy:", huy["HP"],"HP)
                         print("Mặc dù bị chém , anh Huy vãn cười hihi")
                         print("Ngay lập tức đối phương sử dụng 1 cú đấm vô cùng binh thường vào bạn!!!")
                         print("Bạn mất",damage2,"HP")
@@ -172,7 +172,7 @@ while True :
                             print("Bạn sử dụng kiếm Assassin X chém 1 nhát vô cùng đau đớn vào anh Đức")
                             print("Đức mất:", damage)
                             print("HP hiện tại của anh Đức:", duc["HP"])
-                            print("Mặc dù bị chém trọng thương ngay từ phát đầu tiên song Đức đã dùng máy tính đập vào đầu bạn")
+                            print("Mặc dù bị chém trọng thương  song Đức đã dùng máy tính đập vào đầu bạn")
                             duc["STR"] = duc["STR"]+5
                             print("Kẻ địch tăng:5 STR")
 
@@ -183,7 +183,7 @@ while True :
                         damage = player["STR"] - duc["DEF"]
                         duc["HP"] = duc["HP"] - damage
                         print("Bạn vừa tung cú chém kết liễu đối phương")
-                        print("Kẻ địch mất:", damage)
+                        print("Kẻ địch mất:", damage,"HP)
                         print("HP hiện tại của địch:",duc["HP"],"HP")
                         print("Đối phương đã gục")
                         print("Bạn nhận được vũ khí mới: Máy tính")
