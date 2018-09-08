@@ -197,3 +197,4 @@ while True :
             print("Không biết đọc à !")
     else:
         print("Không hiểu tiếng người à !")
+        
