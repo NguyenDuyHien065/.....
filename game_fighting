@@ -1,0 +1,182 @@
+from combat import combat_round,combat_full
+
+
+
+inventory = []
+golden_stick = {
+    "NAME":"GOLDEN STICK",
+    "AGI":15,
+    "HP":20,
+    "STR":100,
+}
+player = {
+    "NAME": "AOV",
+    "CLASS": "HACKER",                     #Rất quan trọng
+    "HP":60,
+    "STR":7,
+    "AGI":1,
+    "DEF":10,
+    "LVL":1,
+    "LUCK":4,
+}
+
+steal_gaunlet={
+    "NAME":"STEAL GAUNLET",
+    "HP":10,
+    "AGI":-5,
+    "STA":-3,
+    "LUCK":1,
+
+
+}
+
+bronze_shield = {
+    "NAME":"BRONZE SHIELD",
+    "HP":10,
+    "AGI":-2,
+}
+
+
+golden_stick = {
+    "NAME":"GOLDEN STICK",
+    "AGI":15,
+    "HP":20,
+    "STR":100,
+
+}
+
+
+
+
+while True :
+    print("*"*10)
+    print("Viết 'stats' để xem chỉ số bản thân hoặc viết 'here' để chơi")
+    cmd = input("Your command")
+    if cmd == "stats":
+        print("Name :", player["NAME"])
+        print("CLASS:", player["CLASS"])
+        print("HP", player["HP"])
+        print("STR:", player["STR"])
+        print("DEF:", player["DEF"])
+        print("LEVEL:", player["LVL"])
+    elif cmd == "here":
+        print("Bạn đang ở trước cửa lâu đài")
+        print("Bạn có 2 lựa chọn")
+        print("1 . Về Techkids")
+        print("2.Đi vào cánh rừng đối diện")
+        option = input ("Lựa chọn của bạn ?")
+        if option == "1":
+            print("Xin lỗi , đã hết giờ làm việc")
+            print("Nhập lại đi !!")
+            print("Bạn có 2 lựa chọn")
+            print("1 . Về Techkids")
+            print("2.Đi vào cánh rừng đối diện")
+            option = input("Lựa chọn của bạn ?")
+            if option == "2":
+                if option == "2":
+                    print("Bạn đã bước vào dừng")
+                    print("...")
+                    print("Bạn thấy một bình thủy dịch ở trên mặt đất")
+                    print("1.Bỏ qua")
+                    print("2.Nhặt lên uống")
+                    option = input("Lựa chọn của bạn ?")
+                    if option == "1":
+                        print("Tiếc quá")
+                    elif option == "2":
+                        player["HP"] = 100  # Rất quan trọng
+                        print("Bạn đã được hồi phục hoàn toàn máu")
+
+                        print("HP", player["HP"])
+
+                    print("Bạn gặp 1 con Orc")
+                    print("Bạn sẽ")
+                    print("1 . Chạy trốn")
+                    print("2 . Nấp vào hang đá bên cạnh")
+                    print("3. Đánh")
+                    option = input("Lựa chọn của bạn ?")
+                    if option == "1":
+                        print("Do bạn chạy quá chậm nên bạn bị Orc giết")
+                    elif option == "2":
+                        print("Con Orc không nhìn thấy bạn và bỏ đi")
+                        print("Tuy nhiên , khi bạn quay lại nhìn vào hang thì thấy 1 đàn sói")
+                    elif option == "3":
+                        print("Chỉ số của Org:")
+                        org = {"NAME": "Org guard",
+                               "STR": 1,
+                               "DEF": 2,
+                               "HP":69,
+
+                        }
+                        print("Name :", org["NAME"])
+
+                        print("HP", org["HP"])
+                        print("STR:", org["STR"])
+                        print("DEF:", org["DEF"])
+                        combat_full(player,org)
+                        print("Con người và quái vật bắt đầu tiến vào'phang nhau', nhưng chỉ có 1 người sống sót")
+                        print("HUMAN vs MONSTER")
+
+
+
+
+        elif option == "2":
+            print("Bạn đã bước vào dừng")
+            print("...")
+            print("Bạn thấy một bình thủy dịch ở trên mặt đất")
+            print("1.Bỏ qua")
+            print("2.Nhặt lên uống")
+            option = input("Lựa chọn của bạn ?")
+
+
+
+
+            if option == "1":
+                print("Tiếc quá")
+            elif option == "2":
+                player ["HP"] = 100 #Rất quan trọng
+                print("Bạn đã được hồi phục hoàn toàn máu")
+
+                print("HP", player["HP"])
+
+            print("Bạn gặp 1 con Orc")
+            print("Bạn sẽ")
+            print("1 . Chạy trốn")
+            print("2 . Nấp vào hang đá bên cạnh")
+            print ("3. Đánh")
+            option = input ("Lựa chọn của bạn ?")
+            if option == "1":
+                print("Do bạn chạy quá chậm nên bạn bị Orc giết")
+            elif option == "2":
+                print("Con Orc không nhìn thấy bạn và bỏ đi")
+                print ("Tuy nhiên , khi bạn quay lại nhìn vào hang thì thấy 1 đàn sói")
+            elif option =="3":
+                print ("Chỉ số của Org:")
+                org = {"NAME":"Org guard",
+                       "STR": 1,
+                       "DEF": 2,
+                       "HP":69,
+                       "LUCK":1,
+                       "AGI":2,
+
+                       }
+                print("Name :", org["NAME"])
+
+                print("HP", org["HP"])
+                print("STR:", org["STR"])
+                print("DEF:", org["DEF"])
+                print("Con người và quái vật bắt đầu tiến vào'phang nhau', nhưng chỉ có 1 người sống sót")
+                print("HUMAN vs MONSTER")
+                combat_full(player,org)
+
+                new_item = inventory.append(inventory)
+                for key, value in new_item.items():
+                    print("*", key, ":", value)
+
+                    print("Bạn nhặt được:", new_item)
+
+
+
+
+
+    else :
+        print("LOSS")
