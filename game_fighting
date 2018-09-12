@@ -168,11 +168,11 @@ while True :
                 print("HUMAN vs MONSTER")
                 combat_full(player,org)
 
-                new_item = inventory.append(inventory)
-                for key, value in new_item.items():
-                    print("*", key, ":", value)
+                inventory = [steal_gaunlet,bronze_shield,golden_stick]
+                for item in inventory:
+                show_item(item)
 
-                    print("Bạn nhặt được:", new_item)
+                    print("Bạn nhặt được:", item)
 
 
 
