@@ -31,7 +31,7 @@ org = {"NAME":"Org guard",
                        "AGI":2,
        }
 
-inventory=[golden_stick]
+inventory=[]
 
 def combat_round(attacker, defender):
     print(attacker["NAME"],"is beating",defender["NAME"])
